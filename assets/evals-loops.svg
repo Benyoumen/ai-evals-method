@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-label="Two eval loops. Offline: may this change ship? Online: what are we getting wrong? Each new failure becomes a test case.">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#ffffff" fill-opacity="0.85"/></marker>
+</defs>
+<rect width="1200" height="470" rx="18" fill="url(#g)"/>
+<circle cx="1080" cy="40" r="140" fill="#ffffff" fill-opacity="0.05"/>
+<g font-family="Segoe UI, Helvetica, Arial, sans-serif" fill="#ffffff">
+<text x="40" y="56" font-size="30" font-weight="700">How I evaluate an AI agent</text>
+<text x="1160" y="56" font-size="18" fill-opacity="0.8" text-anchor="end">Two loops that feed each other</text>
+
+<g fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.25">
+<rect x="40" y="90" width="500" height="300" rx="14"/>
+<rect x="660" y="90" width="500" height="300" rx="14"/>
+</g>
+
+<text x="66" y="132" font-size="24" font-weight="700">Offline <tspan font-weight="400" fill-opacity="0.85">· may this change ship?</tspan></text>
+<text x="686" y="132" font-size="24" font-weight="700">Online <tspan font-weight="400" fill-opacity="0.85">· what are we getting wrong?</tspan></text>
+
+<g font-size="18" fill-opacity="0.95">
+<text x="66" y="180"><tspan fill="#5eead4" font-weight="700">1 </tspan>Fixed dataset, 30% held out</text>
+<text x="66" y="220"><tspan fill="#5eead4" font-weight="700">2 </tspan>Run the candidate, several times</text>
+<text x="66" y="260"><tspan fill="#5eead4" font-weight="700">3 </tspan>Score: code checks, then a validated judge</text>
+<text x="66" y="300"><tspan fill="#5eead4" font-weight="700">4 </tspan>Compare with production, case by case</text>
+<text x="66" y="340"><tspan fill="#5eead4" font-weight="700">5 </tspan>Promote only if it passes the gate</text>
+
+<text x="686" y="180"><tspan fill="#5eead4" font-weight="700">1 </tspan>Trace every run in production</text>
+<text x="686" y="220"><tspan fill="#5eead4" font-weight="700">2 </tspan>User ratings and a judge score the runs</text>
+<text x="686" y="260"><tspan fill="#5eead4" font-weight="700">3 </tspan>Read the worst runs every week</text>
+<text x="686" y="300"><tspan fill="#5eead4" font-weight="700">4 </tspan>Name the failure and count it</text>
+<text x="686" y="340"><tspan fill="#5eead4" font-weight="700">5 </tspan>Turn it into a new test case</text>
+</g>
+
+<g stroke="#ffffff" stroke-opacity="0.85" stroke-width="2.5" fill="none" marker-end="url(#a)">
+<path d="M544 170 H656"/>
+<path d="M910 394 V430 H290 V394"/>
+</g>
+<text x="600" y="160" font-size="15" fill-opacity="0.85" text-anchor="middle">release</text>
+<text x="600" y="456" font-size="16" fill-opacity="0.9" text-anchor="middle">Each new failure joins the dataset and guards every future change</text>
+</g>
+</svg>
