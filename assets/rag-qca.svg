@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="Six RAG checks between question, context and answer. Question and context: context relevance and answerability. Question and answer: answer relevance and self-containment. Context and answer: faithfulness and support coverage.">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
+<marker id="mb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#93c5fd"/></marker>
+<marker id="mp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#c4b5fd"/></marker>
+<marker id="ma" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#fcd34d"/></marker>
+</defs>
+<rect width="1200" height="720" rx="18" fill="url(#g)"/>
+<circle cx="1080" cy="40" r="140" fill="#ffffff" fill-opacity="0.05"/>
+<g font-family="Segoe UI, Helvetica, Arial, sans-serif" fill="#ffffff">
+<text x="40" y="62" font-size="30" font-weight="700">RAG evals: question, context, answer</text>
+<text x="1160" y="62" font-size="18" fill-opacity="0.8" text-anchor="end">Six checks, one per direction</text>
+
+<g stroke-width="3" fill="none">
+<path d="M561 218 L369 452" stroke="#93c5fd" marker-start="url(#mb)" marker-end="url(#mb)"/>
+<path d="M639 218 L831 452" stroke="#c4b5fd" marker-start="url(#mp)" marker-end="url(#mp)"/>
+<path d="M392 500 L808 500" stroke="#fcd34d" marker-start="url(#ma)" marker-end="url(#ma)"/>
+</g>
+
+<g fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2">
+<circle cx="600" cy="170" r="56"/>
+<circle cx="330" cy="500" r="56"/>
+<circle cx="870" cy="500" r="56"/>
+</g>
+<g font-size="38" font-weight="700" text-anchor="middle" fill="#5eead4">
+<text x="600" y="184">Q</text>
+<text x="330" y="514">C</text>
+<text x="870" y="514">A</text>
+</g>
+
+<text x="672" y="162" font-size="20" font-weight="700">Question</text>
+<text x="672" y="186" font-size="15" fill-opacity="0.8">What the user asked</text>
+<text x="330" y="590" font-size="20" font-weight="700" text-anchor="middle">Context</text>
+<text x="330" y="614" font-size="15" fill-opacity="0.8" text-anchor="middle">What retrieval returned</text>
+<text x="870" y="590" font-size="20" font-weight="700" text-anchor="middle">Answer</text>
+<text x="870" y="614" font-size="15" fill-opacity="0.8" text-anchor="middle">What the model wrote</text>
+
+<text x="600" y="380" font-size="16" fill-opacity="0.75" text-anchor="middle">Each arrow is</text>
+<text x="600" y="402" font-size="16" fill-opacity="0.75" text-anchor="middle">one Pass/Fail check</text>
+
+<!-- Question and context -->
+<text x="40" y="250" font-size="20" font-weight="700">Context relevance <tspan fill="#93c5fd" font-size="17">C|Q</tspan></text>
+<text x="40" y="276" font-size="15" fill-opacity="0.82">Did retrieval find passages that</text>
+<text x="40" y="297" font-size="15" fill-opacity="0.82">help answer the question?</text>
+<text x="40" y="350" font-size="20" font-weight="700">Answerability <tspan fill="#93c5fd" font-size="17">Q|C</tspan></text>
+<text x="40" y="376" font-size="15" fill-opacity="0.82">Can the context answer the</text>
+<text x="40" y="397" font-size="15" fill-opacity="0.82">question at all?</text>
+
+<!-- Question and answer -->
+<text x="900" y="250" font-size="20" font-weight="700">Answer relevance <tspan fill="#c4b5fd" font-size="17">A|Q</tspan></text>
+<text x="900" y="276" font-size="15" fill-opacity="0.82">Does the answer address what</text>
+<text x="900" y="297" font-size="15" fill-opacity="0.82">the user asked?</text>
+<text x="900" y="350" font-size="20" font-weight="700">Self-containment <tspan fill="#c4b5fd" font-size="17">Q|A</tspan></text>
+<text x="900" y="376" font-size="15" fill-opacity="0.82">Could a reader infer the question</text>
+<text x="900" y="397" font-size="15" fill-opacity="0.82">from the answer alone?</text>
+
+<!-- Context and answer -->
+<text x="600" y="580" font-size="20" font-weight="700" text-anchor="middle">Faithfulness <tspan fill="#fcd34d" font-size="17">A|C</tspan></text>
+<text x="600" y="604" font-size="15" fill-opacity="0.82" text-anchor="middle">Does the answer stick to the context?</text>
+<text x="600" y="648" font-size="20" font-weight="700" text-anchor="middle">Support coverage <tspan fill="#fcd34d" font-size="17">C|A</tspan></text>
+<text x="600" y="672" font-size="15" fill-opacity="0.82" text-anchor="middle">Does the context back every claim?</text>
+</g>
+</svg>

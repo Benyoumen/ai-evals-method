@@ -27,6 +27,10 @@ The method works with any tool. I run it with Arize AX for traces, datasets, exp
 
 ### In production
 
+<p align="center"><img src="https://benyoumen.github.io/Benyoumen/assets/production-loop.svg" alt="Production eval loop in nine steps, from defining the product outcome to adding new failures back into the eval set." width="100%"></p>
+
+The full checklist, with signals, alerts and the weekly review: [Monitoring an agent in production](docs/production-monitoring.md).
+
 | # | Step | What you do |
 |---|---|---|
 | 11 | Trace in the app | The same tracing, with personal data hidden when real customers are involved. |
@@ -64,11 +68,30 @@ To claim 95% accuracy you need about 60 clean cases. For 99%, about 300. The las
 - **A judge that never says Fail cannot be measured.** Its numbers stay off any gate until it agrees with human labels.
 - **Optimizing on the eval set inflates the gain.** A tuned prompt went from 16 to 21 of 22 checks. It stays a candidate until held-out cases confirm it.
 
+## Picking a tool
+
+The method matters more than the tool. Choose by what you need to see first: traces, experiments, CI tests or benchmarks.
+
+| Tool | Good fit |
+|---|---|
+| Arize AX | Tracing, datasets, experiments, online judges and prompt versions in one place. What I use. |
+| Arize Phoenix | Open-source tracing and evals that run on your own machine |
+| LangSmith | Tracing plus offline and online evals |
+| Braintrust | Product evals, experiments and trace review |
+| OpenAI Evals API | Evals inside the OpenAI platform |
+| Ragas | RAG and application-level metrics |
+| DeepEval | Developer test suites in the style of Pytest |
+| Promptfoo | Prompt and model comparisons, CI and red-team testing |
+| Inspect AI | Research, safety, reasoning, coding and agent evals |
+| lm-evaluation-harness | Standard benchmarks for foundation models |
+
 ## Read next
 
+- [Monitoring an agent in production](docs/production-monitoring.md): the nine-step loop, what to watch and the weekly review.
+- [Evaluating a RAG answer](docs/rag-evals.md): six checks between question, context and answer.
 - [How to write an LLM-as-a-Judge](docs/llm-as-a-judge.md): the method, and how a PM should steer it.
 - [Example judge prompt](examples/evidence-supported-judge.md): one judge, one failure mode, ready to adapt.
 
 ## Sources
 
-The method builds on the AI evals course by Hamel Husain and Shreya Shankar, the AI Product Management program at Product Faculty, and the Arize AX documentation.
+The method builds on the AI evals course by Hamel Husain and Shreya Shankar, the AI Product Management program at Product Faculty, Jason Liu's six RAG evals, and the Arize AX documentation.
