@@ -4,7 +4,7 @@ How I measure, improve and ship an AI agent: two loops, fifteen steps and one re
 
 The method works with any tool. I run it with Arize AX for traces, datasets, experiments, judges and prompt versions, and with Claude Code skills for the analysis. Every example uses a fictional product and fictional data.
 
-<p align="center"><img src="assets/evals-loops.svg" alt="Two loops: offline decides if a change may ship, online finds what the agent gets wrong. Each new failure becomes a test case." width="100%"></p>
+<p align="center"><img src="https://benyoumen.github.io/Benyoumen/assets/evals-loops.svg" alt="Two loops: offline decides if a change may ship, online finds what the agent gets wrong. Each new failure becomes a test case." width="100%"></p>
 
 **One rule holds the two loops together:** read real traces before you write any automated check. A judge built on guesses only measures the guesses.
 
